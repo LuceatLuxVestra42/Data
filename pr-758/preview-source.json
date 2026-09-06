@@ -1,0 +1,7 @@
+{
+  "status": "PR_PREVIEW_DEPLOYMENT",
+  "sourceRepository": "LuceatLuxVestra42/langrisser-future-guide",
+  "sourceSha": "fb56d68a204365985dc8eefdf28d8725df0ee54c",
+  "pullRequest": 758,
+  "publisher": ".github/workflows/project-tooling-route-hosted-qa.yml"
+}
