@@ -1,1 +1,0 @@
-import{t as e}from"./heroes_._heroId-DuDKsOrm.js";export{e as getStaticHeroJobMovement};
