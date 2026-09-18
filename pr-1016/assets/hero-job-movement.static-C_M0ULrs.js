@@ -1,0 +1,1 @@
+import{t as e}from"./heroes_._heroId-Ctk_zs3S.js";export{e as getStaticHeroJobMovement};
