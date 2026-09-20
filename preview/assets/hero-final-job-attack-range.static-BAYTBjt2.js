@@ -1,1 +1,0 @@
-import{t as e}from"./heroes_._heroId-Br50QPf9.js";export{e as getStaticHeroFinalJobAttackRange};
