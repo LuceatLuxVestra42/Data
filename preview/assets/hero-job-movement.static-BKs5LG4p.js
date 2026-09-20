@@ -1,0 +1,1 @@
+import{t as e}from"./heroes_._heroId-BmT16cfL.js";export{e as getStaticHeroJobMovement};
