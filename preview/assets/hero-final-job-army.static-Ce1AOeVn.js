@@ -1,1 +1,0 @@
-import{n as e}from"./heroes_._heroId-BeAR8iyv.js";export{e as getStaticHeroFinalJobArmy};
