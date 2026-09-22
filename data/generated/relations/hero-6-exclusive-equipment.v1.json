@@ -1,0 +1,13 @@
+{
+  "heroId": 6,
+  "relations": {
+    "exclusiveEquipment": [
+      {
+        "displayName": "청룡의 갑옷",
+        "equipmentId": 416,
+        "relationType": "exclusive"
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,40 @@
+name: Hero 6 Exclusive Equipment 4R
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - data/relations/hero-exclusive-equipment/**
+      - data/equipment/416/**
+      - data/generated/relations/hero-6-exclusive-equipment.v1.json
+      - data/contracts/hero-6-exclusive-equipment-handoff.v1.json
+      - tools/hero-6/generate-exclusive-equipment-relation.mjs
+      - tools/hero-6/validate-exclusive-equipment-handoff.mjs
+      - tests/hero-6-exclusive-equipment-4r.test.mjs
+      - .github/workflows/hero-6-exclusive-equipment-4r.yml
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check generated relation
+        run: node tools/hero-6/generate-exclusive-equipment-relation.mjs --check
+      - name: Validate relation handoff
+        run: node tools/hero-6/validate-exclusive-equipment-handoff.mjs
+      - name: Run 4R tests
+        run: node --test tests/hero-6-exclusive-equipment-4r.test.mjs
+      - name: Verify clean validation
+        run: git diff --exit-code

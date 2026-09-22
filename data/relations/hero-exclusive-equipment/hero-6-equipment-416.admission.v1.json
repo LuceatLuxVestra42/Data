@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "scope": "hero-6-exclusive-equipment-4r",
+  "decision": "ADMIT_MIGRATED_RELATION",
+  "relation": {
+    "heroId": 6,
+    "equipmentId": 416,
+    "relationType": "exclusive"
+  },
+  "evidenceRef": "data/relations/hero-exclusive-equipment/hero-6-equipment-416.evidence.v1.json#directSourceProvenance",
+  "predecessorRole": "UNMIGRATED_SEMANTIC_PREDECESSOR_WITH_SURVIVING_DIRECT_EVIDENCE",
+  "nonScope": [
+    "all Hero-Equipment relations",
+    "general equipment eligibility",
+    "relation discovery by name",
+    "relation discovery by description",
+    "relation discovery by numeric pattern"
+  ]
+}
