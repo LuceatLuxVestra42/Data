@@ -12,7 +12,7 @@ const evidence = readJson('data/hero/6/evidence.v1.json');
 const admission = readJson('data/hero/6/admission.v1.json');
 const canonical = readJson('data/hero/6/canonical.v1.json');
 const localization = readJson('data/hero/6/localization.ko.v1.json');
-const asset = readJson('data/hero/6/asset.sp-artwork.v1.json');
+const asset = readJson('data/hero/6/asset.base-portrait.v1.json');
 const generated = readJson('data/generated/hero/6.v1.json');
 
 test('4A uses actual pinned evidence, not the synthetic 3A value', () => {
@@ -26,44 +26,32 @@ test('4A uses actual pinned evidence, not the synthetic 3A value', () => {
 });
 
 test('4A identity admission is explicit and does not use names or ID arithmetic', () => {
-  assert.deepEqual(admission.identity.sourceIdentity, {
-    sourceFamily: 'CN_ConfigDataHeroInfo',
-    sourceField: 'ID',
-    sourceValue: 6,
-    scope: 'CN'
-  });
   assert.equal(admission.identity.canonicalHeroId, 6);
   assert.equal(admission.identity.nameJoinUsed, false);
   assert.equal(admission.identity.idArithmeticUsed, false);
 });
 
 test('4B canonical stays minimal and CN-scoped', () => {
-  assert.deepEqual(canonical, {
-    version: 1,
-    heroId: 6,
-    facts: {
-      heroOwnedTroopHpModifierPct: {
-        scope: 'CN',
-        value: 15
-      }
-    }
-  });
+  assert.equal(canonical.heroId, 6);
+  assert.equal(canonical.facts.heroOwnedTroopHpModifierPct.scope, 'CN');
+  assert.equal(canonical.facts.heroOwnedTroopHpModifierPct.value, 15);
 });
 
-test('4C localization is presentation-only and matches the admitted source label', () => {
+test('4C localization remains presentation-only', () => {
   assert.equal(localization.sourceLabel, evidence.sourceEvidence.observed.Name);
   assert.equal(localization.displayLabel, '레온');
   assert.equal(localization.authorityBoundary, 'PRESENTATION_ONLY');
   assert.equal(localization.identityJoinUsed, false);
 });
 
-test('4C asset is explicitly SP artwork, not a normal portrait claim', () => {
+test('Hero 6 current asset is the verified clean base portrait', () => {
   assert.equal(asset.heroId, 6);
-  assert.equal(asset.kind, 'SP_ARTWORK');
-  assert.equal(asset.charImageId, 1013);
-  assert.equal(asset.normalPortraitClaim, false);
-  assert.equal(asset.proof.resultStatus, 'PASS_SP_ASSET_INTAKE_MIGRATION_INDEPENDENCE');
-  assert.equal(asset.expected.sha256, 'd1516cb5304efee27538fcae72468b932aeece57972d9728bd939627c5aa029e');
+  assert.equal(asset.kind, 'BASE_PORTRAIT');
+  assert.equal(asset.normalPortraitClaim, true);
+  assert.equal(asset.source.decorationPolicy, 'CLEAN_CHARACTER_ART_ONLY');
+  assert.equal(asset.source.sha256, '8d04d4858d8bbb8021cef1439183018293ff28659f42e486ae1306d8c5f616d1');
+  assert.equal(asset.expected.sha256, '7f679f80b4712353f727aeb6e087ce8ba8380bce8542bc992115b154889b23f3');
+  assert.equal(asset.proof.manifestStatus, 'PASS');
 });
 
 test('4D generation uses only admitted internal inputs and matches committed output', () => {

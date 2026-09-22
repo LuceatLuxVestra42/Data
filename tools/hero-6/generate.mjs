@@ -16,7 +16,7 @@ function stable(value) {
 export function buildHero6Consumer() {
   const canonical = readJson('data/hero/6/canonical.v1.json');
   const localization = readJson('data/hero/6/localization.ko.v1.json');
-  const asset = readJson('data/hero/6/asset.sp-artwork.v1.json');
+  const asset = readJson('data/hero/6/asset.base-portrait.v1.json');
 
   if (canonical.heroId !== 6 || localization.heroId !== 6 || asset.heroId !== 6) {
     throw new Error('HERO_ID_MISMATCH');
@@ -24,8 +24,8 @@ export function buildHero6Consumer() {
   if (localization.authorityBoundary !== 'PRESENTATION_ONLY' || localization.identityJoinUsed !== false) {
     throw new Error('INVALID_LOCALIZATION_BOUNDARY');
   }
-  if (asset.kind !== 'SP_ARTWORK' || asset.normalPortraitClaim !== false) {
-    throw new Error('INVALID_ASSET_BOUNDARY');
+  if (asset.kind !== 'BASE_PORTRAIT' || asset.normalPortraitClaim !== true) {
+    throw new Error('INVALID_BASE_PORTRAIT_BOUNDARY');
   }
 
   return {

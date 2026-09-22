@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "heroId": 6,
+  "assetKey": "hero-6-base-portrait",
+  "kind": "BASE_PORTRAIT",
+  "normalPortraitClaim": true,
+  "source": {
+    "storage": "GOOGLE_DRIVE_BASE_SKIN_PNG",
+    "driveFileId": "1oPTSwW5O4UWxY6idqHDJ_smjPTm2Wsq1",
+    "fileName": "Leon_Animation_FIN_idle_Normal_default.png",
+    "mimeType": "image/png",
+    "byteLength": 1316695,
+    "sha256": "8d04d4858d8bbb8021cef1439183018293ff28659f42e486ae1306d8c5f616d1",
+    "width": 1443,
+    "height": 2112,
+    "alpha": true,
+    "decorationPolicy": "CLEAN_CHARACTER_ART_ONLY"
+  },
+  "expected": {
+    "mimeType": "image/webp",
+    "byteLength": 239012,
+    "sha256": "7f679f80b4712353f727aeb6e087ce8ba8380bce8542bc992115b154889b23f3",
+    "width": 1443,
+    "height": 2112,
+    "quality": 90
+  },
+  "proof": {
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "ref": "57fb1b1262f475d24a3ddd8dc0d5883c2eabe4ff",
+    "manifestPath": "data/generated/hero-portrait-presentation-sample.v1.json",
+    "manifestGitBlobSha": "c52bb6bcb15645c8cb74877f853e501d1d988dbc",
+    "webPath": "public/images/heroes/portrait-samples/6.webp",
+    "manifestStatus": "PASS"
+  },
+  "authorityBoundary": "PRESENTATION_ASSET_REFERENCE_ONLY",
+  "notes": [
+    "This is the clean base-skin portrait derivative, not SP artwork.",
+    "The retained asset.sp-artwork.v1.json remains valid alternate presentation evidence but is no longer the current Hero 6 portrait input."
+  ]
+}

@@ -14,16 +14,16 @@ function stable(value) {
 }
 
 const specs = [
-  { heroId: 1, base: 'data/hero/1' },
-  { heroId: 6, base: 'data/hero/6' },
-  { heroId: 37, base: 'data/hero/37' }
+  { heroId: 1, base: 'data/hero/1', assetFile: 'asset.sp-artwork.v1.json', assetKind: 'SP_ARTWORK', normalPortraitClaim: false },
+  { heroId: 6, base: 'data/hero/6', assetFile: 'asset.base-portrait.v1.json', assetKind: 'BASE_PORTRAIT', normalPortraitClaim: true },
+  { heroId: 37, base: 'data/hero/37', assetFile: 'asset.sp-artwork.v1.json', assetKind: 'SP_ARTWORK', normalPortraitClaim: false }
 ];
 
 export function buildHeroIndex() {
-  const heroes = specs.map(({heroId, base}) => {
+  const heroes = specs.map(({heroId, base, assetFile, assetKind, normalPortraitClaim}) => {
     const canonical = readJson(`${base}/canonical.v1.json`);
     const localization = readJson(`${base}/localization.ko.v1.json`);
-    const asset = readJson(`${base}/asset.sp-artwork.v1.json`);
+    const asset = readJson(`${base}/${assetFile}`);
 
     if (canonical.heroId !== heroId || localization.heroId !== heroId || asset.heroId !== heroId) {
       throw new Error(`HERO_ID_MISMATCH:${heroId}`);
@@ -31,7 +31,7 @@ export function buildHeroIndex() {
     if (localization.authorityBoundary !== 'PRESENTATION_ONLY' || localization.identityJoinUsed !== false) {
       throw new Error(`INVALID_LOCALIZATION_BOUNDARY:${heroId}`);
     }
-    if (asset.kind !== 'SP_ARTWORK' || asset.normalPortraitClaim !== false) {
+    if (asset.kind !== assetKind || asset.normalPortraitClaim !== normalPortraitClaim) {
       throw new Error(`INVALID_ASSET_BOUNDARY:${heroId}`);
     }
 

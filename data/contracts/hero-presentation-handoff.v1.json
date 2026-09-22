@@ -3,10 +3,10 @@
   "status": "PRODUCER_HANDOFF_READY",
   "producer": {
     "repository": "LuceatLuxVestra42/Data",
-    "acceptedCommit": "9158770f21436187a33778354dde7d2d7c703795",
+    "acceptedCommit": "b2db857dc7e00f7933e00a7e27e01cf94be8c690",
     "inputPath": "data/generated/hero/6.v1.json",
-    "gitBlobSha": "52e8d92ebd862a644d3826f2683d395ea7804106",
-    "contentSha256": "bacd8a8242e112dc8a0c8e383e6fe94b016e6a45954673a9cb03aed2b9e8f64a"
+    "gitBlobSha": "3d31e7c8736cc69707a3b18dfa86c899983f0d18",
+    "contentSha256": "51fc198ba0e51a7f47b2ca7fac4b440bad235321e4ad9d47effde9ee2fc4f976"
   },
   "consumerBoundary": {
     "mode": "SEPARATE_PRESENTATION_REPOSITORY",
@@ -35,13 +35,13 @@
       "facts.heroOwnedTroopHpModifierPct.scope",
       "facts.heroOwnedTroopHpModifierPct.value"
     ],
-    "assetKind": "SP_ARTWORK",
+    "assetKind": "BASE_PORTRAIT",
     "factScope": "CN"
   },
   "authorityBoundary": "PRESENTATION_HANDOFF_CONTRACT_NOT_SEMANTIC_AUTHORITY",
   "notes": [
-    "This contract pins the accepted generated consumer bytes for the first separate-repository presentation slice.",
-    "A future presentation repository must consume only the handoff payload, not producer evidence/canonical internals.",
-    "Changing the frontend framework does not change semantic authority."
+    "Hero 6 now uses the verified clean base-skin portrait derivative as the current presentation asset.",
+    "The SP artwork evidence remains retained but is no longer the current portrait input.",
+    "A presentation repository must consume only the handoff payload, not producer evidence/canonical internals."
   ]
 }
