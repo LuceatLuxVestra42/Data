@@ -1,0 +1,99 @@
+name: Hero Presentation Handoff
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - data/contracts/hero-presentation-handoff.v1.json
+      - data/generated/hero/6.v1.json
+      - tools/hero-6/validate-presentation-handoff.mjs
+      - docs/hero-6-presentation-handoff.md
+      - .github/workflows/hero-presentation-handoff.yml
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  producer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate producer handoff
+        run: node tools/hero-6/validate-presentation-handoff.mjs
+      - name: Assemble portable payload
+        run: |
+          mkdir -p handoff
+          cp data/generated/hero/6.v1.json handoff/hero-6.v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hero-6-presentation-handoff
+          path: handoff/hero-6.v1.json
+          if-no-files-found: error
+
+  fresh-consumer:
+    needs: producer
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: hero-6-presentation-handoff
+          path: incoming
+      - name: Create fresh standalone consumer repository
+        run: |
+          mkdir consumer
+          cd consumer
+          git init --quiet
+          cp ../incoming/hero-6.v1.json ./hero-6.v1.json
+          test ! -e data
+          test ! -e tools
+          test ! -e experiments
+      - name: Render minimal presentation from payload only
+        working-directory: consumer
+        run: |
+          node --input-type=module <<'EOF'
+          import fs from 'node:fs';
+
+          const hero = JSON.parse(fs.readFileSync('hero-6.v1.json', 'utf8'));
+          if (hero.heroId !== 6) throw new Error('UNEXPECTED_HERO_ID');
+          if (hero.display?.name !== '레온') throw new Error('UNEXPECTED_DISPLAY_NAME');
+          if (hero.display?.asset?.kind !== 'SP_ARTWORK') throw new Error('UNEXPECTED_ASSET_KIND');
+          if (hero.facts?.heroOwnedTroopHpModifierPct?.value !== 15) throw new Error('UNEXPECTED_FACT_VALUE');
+          if (hero.facts?.heroOwnedTroopHpModifierPct?.scope !== 'CN') throw new Error('UNEXPECTED_FACT_SCOPE');
+
+          const html = [
+            '<!doctype html>',
+            '<html lang="ko">',
+            '<meta charset="utf-8">',
+            '<title>레온</title>',
+            '<main>',
+            '<h1>레온</h1>',
+            '<p data-hero-id="6">Hero 6</p>',
+            '<p>CN 병사 생명 보정: 15%</p>',
+            '<p>Asset: SP_ARTWORK</p>',
+            '</main>',
+            '</html>',
+            ''
+          ].join('\n');
+
+          fs.writeFileSync('index.html', html);
+          EOF
+          grep -q '레온' index.html
+          grep -q 'Hero 6' index.html
+          grep -q '15%' index.html
+          grep -q 'SP_ARTWORK' index.html
+      - name: Verify consumer boundary
+        working-directory: consumer
+        run: |
+          test -f hero-6.v1.json
+          test -f index.html
+          test ! -e data
+          test ! -e tools
+          test ! -e experiments
+          git remote -v | grep -q . && exit 1 || true
