@@ -1,0 +1,33 @@
+name: Hero 6 Vertical Slice 4A-4D
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - data/hero/6/**
+      - data/generated/hero/6.v1.json
+      - tools/hero-6/**
+      - tests/hero-6-vertical-slice.test.mjs
+      - docs/hero-6-vertical-slice.md
+      - .github/workflows/hero-6-vertical-slice.yml
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check generated Hero consumer
+        run: node tools/hero-6/generate.mjs --check
+      - name: Run Hero 6 slice tests
+        run: node --test tests/hero-6-vertical-slice.test.mjs
+      - name: Verify validation left the checkout clean
+        run: git diff --exit-code
