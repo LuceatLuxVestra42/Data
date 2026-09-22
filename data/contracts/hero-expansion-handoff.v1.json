@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "status": "PRODUCER_HANDOFF_READY",
+  "producer": {
+    "repository": "LuceatLuxVestra42/Data",
+    "inputPath": "data/generated/heroes/index.v1.json",
+    "contentSha256": "0d8c3177703b83a042b7a053d83072914f0691f10f358ad1843c3284054e9963"
+  },
+  "population": {
+    "heroIds": [1, 6, 37],
+    "count": 3
+  },
+  "consumerBoundary": {
+    "mode": "SEPARATE_PRESENTATION_REPOSITORY",
+    "forbiddenRuntimeDependencies": [
+      "raw ConfigData",
+      "Legacy repository checkout",
+      "Data repository checkout",
+      "semantic evidence",
+      "canonical source files",
+      "name JOIN",
+      "ID arithmetic"
+    ]
+  },
+  "authorityBoundary": "PRESENTATION_HANDOFF_CONTRACT_NOT_SEMANTIC_AUTHORITY"
+}
