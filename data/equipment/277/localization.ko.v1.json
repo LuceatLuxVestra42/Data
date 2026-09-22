@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "equipmentId": 277,
+  "sourceLabel": "团结",
+  "locale": "ko-KR",
+  "displayLabel": "단결의 반지",
+  "authorityBoundary": "PRESENTATION_ONLY",
+  "reference": {
+    "preservedArtifact": "전용장비_EquipmentID_중국어명_한국어명_영웅_실장상태_한국어효과_통합_2026-09-20.txt",
+    "lookupKey": "EquipmentID=277"
+  },
+  "relationAuthority": false,
+  "identityJoinUsed": false
+}
