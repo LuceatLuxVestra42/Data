@@ -1,0 +1,37 @@
+name: Hero Expansion 1 and 37
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - data/hero/1/**
+      - data/hero/37/**
+      - data/generated/heroes/**
+      - data/contracts/hero-expansion-handoff.v1.json
+      - tools/heroes/**
+      - tests/hero-expansion-1-37.test.mjs
+      - .github/workflows/hero-expansion-1-37.yml
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check aggregate Hero consumer
+        run: node tools/heroes/generate-index.mjs --check
+      - name: Run expansion tests
+        run: node --test tests/hero-expansion-1-37.test.mjs
+      - name: Verify clean validation
+        run: git diff --exit-code

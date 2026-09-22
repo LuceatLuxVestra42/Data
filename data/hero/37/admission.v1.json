@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "scope": "hero-expansion-production-slice",
+  "identity": {
+    "sourceIdentity": {
+      "sourceFamily": "CN_ConfigDataHeroInfo",
+      "sourceField": "ID",
+      "sourceValue": 37,
+      "scope": "CN"
+    },
+    "canonicalHeroId": 37,
+    "decision": "ADMIT_FOR_HERO_EXPANSION_SLICE",
+    "evidenceRef": "data/hero/37/evidence.v1.json#sourceEvidence",
+    "nameJoinUsed": false,
+    "idArithmeticUsed": false
+  },
+  "facts": [
+    {
+      "key": "heroOwnedTroopHpModifierPct",
+      "scope": "CN",
+      "value": 15,
+      "sourceField": "HPCmd_INI",
+      "sourceValue": 1500,
+      "transformation": "HPCmd_INI / 100",
+      "evidenceRef": "data/hero/37/evidence.v1.json#sourceEvidence.observed.HPCmd_INI"
+    }
+  ]
+}
