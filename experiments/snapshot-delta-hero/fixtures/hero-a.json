@@ -1,0 +1,19 @@
+{
+  "provenance": {
+    "source_family": "CN_ConfigDataHeroInfo",
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "source_commit": "6475e63ee23d18adf733756c26a14fa9e3ed662c",
+    "logical_path": "data/configdata/ConfigDataHeroInfo.json",
+    "scope": "CN",
+    "fixture_kind": "pinned_source_subset"
+  },
+  "records": [
+    {
+      "ID": 6,
+      "Name": "利昂",
+      "Useable": true,
+      "HPCmd_INI": 1500,
+      "ATCmd_INI": 1500
+    }
+  ]
+}
