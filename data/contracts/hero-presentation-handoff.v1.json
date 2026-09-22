@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "status": "PRODUCER_HANDOFF_READY",
+  "producer": {
+    "repository": "LuceatLuxVestra42/Data",
+    "acceptedCommit": "9158770f21436187a33778354dde7d2d7c703795",
+    "inputPath": "data/generated/hero/6.v1.json",
+    "gitBlobSha": "52e8d92ebd862a644d3826f2683d395ea7804106",
+    "contentSha256": "bacd8a8242e112dc8a0c8e383e6fe94b016e6a45954673a9cb03aed2b9e8f64a"
+  },
+  "consumerBoundary": {
+    "mode": "SEPARATE_PRESENTATION_REPOSITORY",
+    "runtimeInputs": [
+      "hero-6.v1.json"
+    ],
+    "forbiddenRuntimeDependencies": [
+      "raw ConfigData",
+      "Legacy repository checkout",
+      "Data repository checkout",
+      "semantic evidence",
+      "canonical source files",
+      "name JOIN",
+      "ID arithmetic"
+    ]
+  },
+  "schema": {
+    "heroId": 6,
+    "required": [
+      "version",
+      "heroId",
+      "display.name",
+      "display.asset.key",
+      "display.asset.kind",
+      "display.asset.sha256",
+      "facts.heroOwnedTroopHpModifierPct.scope",
+      "facts.heroOwnedTroopHpModifierPct.value"
+    ],
+    "assetKind": "SP_ARTWORK",
+    "factScope": "CN"
+  },
+  "authorityBoundary": "PRESENTATION_HANDOFF_CONTRACT_NOT_SEMANTIC_AUTHORITY",
+  "notes": [
+    "This contract pins the accepted generated consumer bytes for the first separate-repository presentation slice.",
+    "A future presentation repository must consume only the handoff payload, not producer evidence/canonical internals.",
+    "Changing the frontend framework does not change semantic authority."
+  ]
+}
