@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "equipmentId": 416,
+  "sourceLabel": "青龙之胄",
+  "locale": "ko-KR",
+  "displayLabel": "청룡의 갑옷",
+  "authorityBoundary": "PRESENTATION_ONLY",
+  "reference": {
+    "preservedArtifact": "전용장비_EquipmentID_중국어명_한국어명_영웅_실장상태_한국어효과_통합_2026-09-20.txt",
+    "lookupKey": "EquipmentID=416"
+  },
+  "relationAuthority": false,
+  "identityJoinUsed": false
+}
