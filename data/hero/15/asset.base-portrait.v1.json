@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "heroId": 15,
+  "assetKey": "hero-15-base-portrait",
+  "kind": "BASE_PORTRAIT",
+  "normalPortraitClaim": true,
+  "source": {
+    "storage": "GOOGLE_DRIVE_BASE_SKIN_PNG",
+    "driveFileId": "1cOdLxGc46d9oqJ7Epk7GDZ8wqsZIiF2p",
+    "fileName": "Riana_idle_Normal_default.png",
+    "mimeType": "image/png",
+    "byteLength": 674091,
+    "sha256": "1fe078b3bb4bf51843bceb23d627015091c4d4bddaf657b0c4ae9be5c1911a22",
+    "width": 914,
+    "height": 1654,
+    "alpha": true,
+    "decorationPolicy": "CLEAN_CHARACTER_ART_ONLY",
+    "reverified": "2026-09-23"
+  },
+  "expected": {
+    "mimeType": "image/webp",
+    "byteLength": 145020,
+    "sha256": "28f074e86b1c16709a67d1cea8da496cf31ab1ec34aed83b7af5de682b677221",
+    "width": 914,
+    "height": 1654,
+    "quality": 90
+  },
+  "proof": {
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "ref": "57fb1b1262f475d24a3ddd8dc0d5883c2eabe4ff",
+    "manifestPath": "data/generated/hero-portrait-presentation-sample.v1.json",
+    "manifestGitBlobSha": "c52bb6bcb15645c8cb74877f853e501d1d988dbc",
+    "webPath": "public/images/heroes/portrait-samples/15.webp",
+    "webGitBlobSha": "053939466c1a25872da6881bfad12a006e355724",
+    "manifestStatus": "PASS"
+  },
+  "authorityBoundary": "PRESENTATION_ASSET_REFERENCE_ONLY"
+}

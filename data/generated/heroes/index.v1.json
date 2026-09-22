@@ -43,6 +43,46 @@
     {
       "display": {
         "asset": {
+          "height": 1847,
+          "key": "hero-12-base-portrait",
+          "kind": "BASE_PORTRAIT",
+          "sha256": "2475f034d9734ebc561bec08faccfbb98636931081efeb17601010f852574a4b",
+          "width": 1238
+        },
+        "name": "엘윈"
+      },
+      "facts": {
+        "heroOwnedTroopHpModifierPct": {
+          "scope": "CN",
+          "value": 5
+        }
+      },
+      "heroId": 12,
+      "version": 1
+    },
+    {
+      "display": {
+        "asset": {
+          "height": 1654,
+          "key": "hero-15-base-portrait",
+          "kind": "BASE_PORTRAIT",
+          "sha256": "28f074e86b1c16709a67d1cea8da496cf31ab1ec34aed83b7af5de682b677221",
+          "width": 914
+        },
+        "name": "리아나"
+      },
+      "facts": {
+        "heroOwnedTroopHpModifierPct": {
+          "scope": "CN",
+          "value": 15
+        }
+      },
+      "heroId": 15,
+      "version": 1
+    },
+    {
+      "display": {
+        "asset": {
           "height": 1600,
           "key": "hero-37-sp-artwork",
           "kind": "SP_ARTWORK",

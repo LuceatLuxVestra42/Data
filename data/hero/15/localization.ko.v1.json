@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "heroId": 15,
+  "sourceLabel": "莉亚娜",
+  "locale": "ko-KR",
+  "displayLabel": "리아나",
+  "authorityBoundary": "PRESENTATION_ONLY",
+  "reference": {
+    "preservedArtifact": "영웅명_검수_완료_역할경계보강_2026-09-12.txt",
+    "lookup": "莉亚娜 - 리아나"
+  },
+  "identityJoinUsed": false
+}

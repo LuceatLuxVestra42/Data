@@ -16,6 +16,8 @@ function stable(value) {
 const specs = [
   { heroId: 1, base: 'data/hero/1', assetFile: 'asset.sp-artwork.v1.json', assetKind: 'SP_ARTWORK', normalPortraitClaim: false },
   { heroId: 6, base: 'data/hero/6', assetFile: 'asset.base-portrait.v1.json', assetKind: 'BASE_PORTRAIT', normalPortraitClaim: true },
+  { heroId: 12, base: 'data/hero/12', assetFile: 'asset.base-portrait.v1.json', assetKind: 'BASE_PORTRAIT', normalPortraitClaim: true },
+  { heroId: 15, base: 'data/hero/15', assetFile: 'asset.base-portrait.v1.json', assetKind: 'BASE_PORTRAIT', normalPortraitClaim: true },
   { heroId: 37, base: 'data/hero/37', assetFile: 'asset.sp-artwork.v1.json', assetKind: 'SP_ARTWORK', normalPortraitClaim: false }
 ];
 
