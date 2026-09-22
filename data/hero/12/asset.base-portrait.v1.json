@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "heroId": 12,
+  "assetKey": "hero-12-base-portrait",
+  "kind": "BASE_PORTRAIT",
+  "normalPortraitClaim": true,
+  "source": {
+    "storage": "GOOGLE_DRIVE_BASE_SKIN_PNG",
+    "driveFileId": "1S0Mftmvm4Lu-pdHPvzkant9zfyFGAXNE",
+    "fileName": "Elwin_idle_Normal_default.png",
+    "mimeType": "image/png",
+    "byteLength": 1050023,
+    "sha256": "fc7d6c625d76e69e367b323cf6bd36af96d64e68cc36f50c922ad5cc69d8bcb9",
+    "width": 1238,
+    "height": 1847,
+    "alpha": true,
+    "decorationPolicy": "CLEAN_CHARACTER_ART_ONLY",
+    "reverified": "2026-09-23"
+  },
+  "expected": {
+    "mimeType": "image/webp",
+    "byteLength": 166808,
+    "sha256": "2475f034d9734ebc561bec08faccfbb98636931081efeb17601010f852574a4b",
+    "width": 1238,
+    "height": 1847,
+    "quality": 90
+  },
+  "proof": {
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "ref": "57fb1b1262f475d24a3ddd8dc0d5883c2eabe4ff",
+    "manifestPath": "data/generated/hero-portrait-presentation-sample.v1.json",
+    "manifestGitBlobSha": "c52bb6bcb15645c8cb74877f853e501d1d988dbc",
+    "webPath": "public/images/heroes/portrait-samples/12.webp",
+    "webGitBlobSha": "c6608b997729ed147be55aab839623fbbe5396a5",
+    "manifestStatus": "PASS"
+  },
+  "authorityBoundary": "PRESENTATION_ASSET_REFERENCE_ONLY"
+}
