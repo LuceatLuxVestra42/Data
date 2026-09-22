@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "scope": "hero-6-production-vertical-slice",
+  "sourceEvidence": {
+    "sourceFamily": "CN_ConfigDataHeroInfo",
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "commit": "6475e63ee23d18adf733756c26a14fa9e3ed662c",
+    "logicalPath": "data/configdata/ConfigDataHeroInfo.json",
+    "gitBlobSha": "728daab3370f0c7779449663ea02e638677944d4",
+    "locator": {
+      "field": "ID",
+      "value": 6
+    },
+    "observed": {
+      "ID": 6,
+      "Name": "利昂",
+      "Useable": true,
+      "HPCmd_INI": 1500,
+      "ATCmd_INI": 1500,
+      "CharImage_ID": 6
+    }
+  },
+  "interpretationEvidence": [
+    {
+      "preservedArtifact": "랑그릿사_ConfigData_확정_해석_정리_2026-09-07_소스팩반영.txt",
+      "supportedClaims": [
+        "ConfigDataHeroInfo is the Hero/unit master table and its ID field is the Hero/Unit ID within this source family.",
+        "HeroInfo.HPCmd_INI / 100 is the Hero-owned troop HP modifier percentage and is not Hero-Soldier membership."
+      ]
+    }
+  ],
+  "syntheticInputUsed": false,
+  "notes": [
+    "This evidence admits only the claims explicitly listed in admission.v1.json.",
+    "The 3A synthetic 1600 fixture is not a production admission input."
+  ]
+}

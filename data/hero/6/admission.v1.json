@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "scope": "hero-6-production-vertical-slice",
+  "identity": {
+    "sourceIdentity": {
+      "sourceFamily": "CN_ConfigDataHeroInfo",
+      "sourceField": "ID",
+      "sourceValue": 6,
+      "scope": "CN"
+    },
+    "canonicalHeroId": 6,
+    "decision": "ADMIT_FOR_THIS_HERO_SLICE",
+    "evidenceRef": "data/hero/6/evidence.v1.json#sourceEvidence",
+    "nameJoinUsed": false,
+    "idArithmeticUsed": false
+  },
+  "facts": [
+    {
+      "key": "heroOwnedTroopHpModifierPct",
+      "scope": "CN",
+      "value": 15,
+      "sourceField": "HPCmd_INI",
+      "sourceValue": 1500,
+      "transformation": "HPCmd_INI / 100",
+      "evidenceRef": "data/hero/6/evidence.v1.json#sourceEvidence.observed.HPCmd_INI"
+    }
+  ],
+  "notAdmitted": [
+    "The 3A synthetic value HPCmd_INI=1600 / 16%",
+    "A global Hero population claim",
+    "A KR release/admission claim",
+    "Hero-Soldier membership",
+    "Any identity derived from display-name matching"
+  ]
+}

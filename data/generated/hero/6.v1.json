@@ -1,0 +1,20 @@
+{
+  "display": {
+    "asset": {
+      "height": 1556,
+      "key": "hero-6-sp-artwork",
+      "kind": "SP_ARTWORK",
+      "sha256": "d1516cb5304efee27538fcae72468b932aeece57972d9728bd939627c5aa029e",
+      "width": 1600
+    },
+    "name": "레온"
+  },
+  "facts": {
+    "heroOwnedTroopHpModifierPct": {
+      "scope": "CN",
+      "value": 15
+    }
+  },
+  "heroId": 6,
+  "version": 1
+}

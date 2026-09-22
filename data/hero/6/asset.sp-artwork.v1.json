@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "heroId": 6,
+  "assetKey": "hero-6-sp-artwork",
+  "kind": "SP_ARTWORK",
+  "charImageId": 1013,
+  "sourceSpinePath": "Spine/Char/Leon_ABS/Leon_SP_Prefab.prefab",
+  "expected": {
+    "width": 1600,
+    "height": 1556,
+    "sha256": "d1516cb5304efee27538fcae72468b932aeece57972d9728bd939627c5aa029e"
+  },
+  "proof": {
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "ref": "8b0d6a55dd858cfb171174119ac480c0934ac5dc",
+    "contractPath": "tools/asset-intake/experiments/hero-sp-bootstrap-migration/hero-sp-25-contract.v1.json",
+    "contractGitBlobSha": "b6fa12f3da3d2db01ddf3f6597e125909cca7133",
+    "resultPath": "tools/asset-intake/experiments/hero-sp-bootstrap-migration/result.sp25-migration-independence.v1.json",
+    "resultGitBlobSha": "e54fe089e427d1ec3ab89e2a6d7ee9790bb87f54",
+    "resultStatus": "PASS_SP_ASSET_INTAKE_MIGRATION_INDEPENDENCE"
+  },
+  "authorityBoundary": "PRESENTATION_ASSET_REFERENCE_ONLY",
+  "normalPortraitClaim": false
+}
