@@ -1,0 +1,65 @@
+{
+  "heroes": [
+    {
+      "display": {
+        "asset": {
+          "height": 1600,
+          "key": "hero-1-sp-artwork",
+          "kind": "SP_ARTWORK",
+          "sha256": "866a85af4b320bd02e943445a91dec52c34a00d956d21064aa2d3b80cdde3f64",
+          "width": 1558
+        },
+        "name": "매튜"
+      },
+      "facts": {
+        "heroOwnedTroopHpModifierPct": {
+          "scope": "CN",
+          "value": 5
+        }
+      },
+      "heroId": 1,
+      "version": 1
+    },
+    {
+      "display": {
+        "asset": {
+          "height": 1556,
+          "key": "hero-6-sp-artwork",
+          "kind": "SP_ARTWORK",
+          "sha256": "d1516cb5304efee27538fcae72468b932aeece57972d9728bd939627c5aa029e",
+          "width": 1600
+        },
+        "name": "레온"
+      },
+      "facts": {
+        "heroOwnedTroopHpModifierPct": {
+          "scope": "CN",
+          "value": 15
+        }
+      },
+      "heroId": 6,
+      "version": 1
+    },
+    {
+      "display": {
+        "asset": {
+          "height": 1600,
+          "key": "hero-37-sp-artwork",
+          "kind": "SP_ARTWORK",
+          "sha256": "c91022024571d103dee3c49be81fea9251e41662cb73fbf7e511f149be0af2f2",
+          "width": 1151
+        },
+        "name": "쥬그라"
+      },
+      "facts": {
+        "heroOwnedTroopHpModifierPct": {
+          "scope": "CN",
+          "value": 15
+        }
+      },
+      "heroId": 37,
+      "version": 1
+    }
+  ],
+  "version": 1
+}
