@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "scope": "hero-6-exclusive-equipment-4r",
+  "evidenceKind": "MIGRATED_ACCEPTED_DIRECT_SOURCE_PROVENANCE",
+  "predecessor": {
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "observedMain": "57fb1b1262f475d24a3ddd8dc0d5883c2eabe4ff",
+    "sourceContract": {
+      "path": "data/contracts/hero-exclusive-equipment-relation-source-contract.v1.json",
+      "gitBlobSha": "919a8dd678e72646dba53c1b26fcf2acc0cb3ab8"
+    },
+    "relationSet": {
+      "path": "data/generated/hero-exclusive-equipment-relations.v1.json",
+      "gitBlobSha": "33caa16212a5a71195015e05c815024fb62e6be6"
+    },
+    "finalValidation": {
+      "path": "data/validation/hero-exclusive-equipment-relation-stageB-final.v1.json",
+      "gitBlobSha": "ff3b0a8b1c7a9b364f4c638f0a1110aa3d7626ee"
+    }
+  },
+  "directSourceProvenance": {
+    "sourceKind": "EQUIPMENT_SKILL_HERO",
+    "table": "ConfigDataEquipmentInfo",
+    "recordId": 416,
+    "field": "SkillHero",
+    "value": 6,
+    "nativeDirection": "equipmentId -> heroId"
+  },
+  "supportedClaim": {
+    "heroId": 6,
+    "equipmentId": 416,
+    "relationType": "exclusive"
+  },
+  "boundaries": {
+    "nameJoinUsed": false,
+    "descriptionParsingUsed": false,
+    "idArithmeticUsed": false,
+    "missionType77AsProductionSource": false,
+    "generalEquipmentIncluded": false
+  },
+  "notes": [
+    "The predecessor PASS state is not itself evidence; this migration reuses the preserved direct ConfigDataEquipmentInfo.SkillHero provenance and accepted semantic result.",
+    "MissionType 77 for Leon -> Equipment 416 remains cross-validation only, not the production ownership source."
+  ]
+}
