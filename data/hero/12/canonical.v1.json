@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "heroId": 12,
+  "facts": {
+    "heroOwnedTroopHpModifierPct": {
+      "scope": "CN",
+      "value": 5
+    }
+  }
+}
