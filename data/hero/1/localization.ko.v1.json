@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "heroId": 1,
+  "sourceLabel": "马修",
+  "locale": "ko-KR",
+  "displayLabel": "매튜",
+  "authorityBoundary": "PRESENTATION_ONLY",
+  "reference": {
+    "preservedArtifact": "영웅명_검수_완료_역할경계보강_2026-09-12.txt",
+    "lookup": "马修 - 매튜"
+  },
+  "identityJoinUsed": false
+}
