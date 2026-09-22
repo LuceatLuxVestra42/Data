@@ -1,0 +1,23 @@
+{
+  "relations": [
+    {
+      "displayName": "단결의 반지",
+      "equipmentId": 277,
+      "heroId": 1,
+      "relationType": "exclusive"
+    },
+    {
+      "displayName": "청룡의 갑옷",
+      "equipmentId": 416,
+      "heroId": 6,
+      "relationType": "exclusive"
+    },
+    {
+      "displayName": "쥬그미의 선물",
+      "equipmentId": 280,
+      "heroId": 37,
+      "relationType": "exclusive"
+    }
+  ],
+  "version": 1
+}
