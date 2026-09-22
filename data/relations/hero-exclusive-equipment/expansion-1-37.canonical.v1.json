@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "relations": [
+    {
+      "heroId": 1,
+      "equipmentId": 277,
+      "relationType": "exclusive"
+    },
+    {
+      "heroId": 37,
+      "equipmentId": 280,
+      "relationType": "exclusive"
+    }
+  ]
+}
