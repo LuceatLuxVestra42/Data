@@ -23,11 +23,11 @@
     {
       "display": {
         "asset": {
-          "height": 1556,
-          "key": "hero-6-sp-artwork",
-          "kind": "SP_ARTWORK",
-          "sha256": "d1516cb5304efee27538fcae72468b932aeece57972d9728bd939627c5aa029e",
-          "width": 1600
+          "height": 2112,
+          "key": "hero-6-base-portrait",
+          "kind": "BASE_PORTRAIT",
+          "sha256": "7f679f80b4712353f727aeb6e087ce8ba8380bce8542bc992115b154889b23f3",
+          "width": 1443
         },
         "name": "레온"
       },
