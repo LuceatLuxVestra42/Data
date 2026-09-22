@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - data/hero/1/**
+      - data/hero/6/**
       - data/hero/37/**
       - data/generated/heroes/**
       - data/contracts/hero-expansion-handoff.v1.json
