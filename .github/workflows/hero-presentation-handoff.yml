@@ -63,7 +63,8 @@ jobs:
           const hero = JSON.parse(fs.readFileSync('hero-6.v1.json', 'utf8'));
           if (hero.heroId !== 6) throw new Error('UNEXPECTED_HERO_ID');
           if (hero.display?.name !== '레온') throw new Error('UNEXPECTED_DISPLAY_NAME');
-          if (hero.display?.asset?.kind !== 'SP_ARTWORK') throw new Error('UNEXPECTED_ASSET_KIND');
+          if (hero.display?.asset?.kind !== 'BASE_PORTRAIT') throw new Error('UNEXPECTED_ASSET_KIND');
+          if (hero.display?.asset?.sha256 !== '7f679f80b4712353f727aeb6e087ce8ba8380bce8542bc992115b154889b23f3') throw new Error('UNEXPECTED_ASSET_DIGEST');
           if (hero.facts?.heroOwnedTroopHpModifierPct?.value !== 15) throw new Error('UNEXPECTED_FACT_VALUE');
           if (hero.facts?.heroOwnedTroopHpModifierPct?.scope !== 'CN') throw new Error('UNEXPECTED_FACT_SCOPE');
 
@@ -76,7 +77,7 @@ jobs:
             '<h1>레온</h1>',
             '<p data-hero-id="6">Hero 6</p>',
             '<p>CN 병사 생명 보정: 15%</p>',
-            '<p>Asset: SP_ARTWORK</p>',
+            '<p>Asset: BASE_PORTRAIT</p>',
             '</main>',
             '</html>',
             ''
@@ -87,7 +88,7 @@ jobs:
           grep -q '레온' index.html
           grep -q 'Hero 6' index.html
           grep -q '15%' index.html
-          grep -q 'SP_ARTWORK' index.html
+          grep -q 'BASE_PORTRAIT' index.html
       - name: Verify consumer boundary
         working-directory: consumer
         run: |
