@@ -4,16 +4,18 @@
   "producer": {
     "repository": "LuceatLuxVestra42/Data",
     "inputPath": "data/generated/heroes/index.v1.json",
-    "gitBlobSha": "32901b6e04d66cfdd309ee2e5f2f1bd695bf6489",
-    "contentSha256": "b6983f245fc4dd8bc67bf05f951c38320e4b6a8a531b4b9abc95a9afc9a308ac"
+    "gitBlobSha": "0c9bf31ddd0f85e10640365c0546dd6174200a76",
+    "contentSha256": "009a2a02281686ecf4c30d66fcd6ffe5a8102144055ecea9747a0528fc9347de"
   },
   "population": {
-    "heroIds": [1, 6, 37],
-    "count": 3
+    "heroIds": [1, 6, 12, 15, 37],
+    "count": 5
   },
   "assetPolicy": {
     "hero1": "SP_ARTWORK",
     "hero6": "BASE_PORTRAIT",
+    "hero12": "BASE_PORTRAIT",
+    "hero15": "BASE_PORTRAIT",
     "hero37": "SP_ARTWORK"
   },
   "consumerBoundary": {
@@ -25,7 +27,8 @@
       "semantic evidence",
       "canonical source files",
       "name JOIN",
-      "ID arithmetic"
+      "ID arithmetic",
+      "CARD_ARTWORK"
     ]
   },
   "authorityBoundary": "PRESENTATION_HANDOFF_CONTRACT_NOT_SEMANTIC_AUTHORITY"
