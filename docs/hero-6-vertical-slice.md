@@ -1,26 +1,20 @@
-# Hero 6 production vertical slice — 4A to 4D
+# Hero 6 production vertical slice
 
-## Purpose
+## Current boundary
 
-Prove the first production-oriented slice in the new repository without importing Legacy lifecycle or frontend architecture.
-
-Current completed boundary:
+Hero 6 remains the first production-oriented slice in the new repository.
 
 ```text
 actual pinned source evidence
 → explicit identity + semantic admission
 → minimal canonical Hero
-→ admitted presentation localization + verified SP artwork reference
+→ presentation localization
+→ verified clean base portrait
 → deterministic generated consumer
+→ separate presentation repository
 ```
 
-Presentation runtime ownership is intentionally not decided here. 4E begins only after deciding whether this repository owns presentation or a separate consumer repository does.
-
-## 4A — Evidence + identity admission
-
-Production admission starts from the actual pinned Hero 6 record, not the Snapshot/Delta 3A synthetic `1600` fixture.
-
-Admitted source observation:
+## Semantic input
 
 ```text
 CN_ConfigDataHeroInfo
@@ -30,71 +24,72 @@ Name=利昂
 HPCmd_INI=1500
 ```
 
-The preserved interpretation evidence supports:
-
-```text
-ConfigDataHeroInfo.ID → Hero/Unit ID in this source family
-HPCmd_INI / 100 → Hero-owned troop HP modifier percentage
-```
-
-For this slice only, source identity `CN_ConfigDataHeroInfo.ID=6` is explicitly admitted as canonical Hero key `6`. This is not a global Hero-population claim.
-
 Admitted fact:
 
 ```text
 CN heroOwnedTroopHpModifierPct = 15
 ```
 
-## 4B — Minimal canonical
+Identity admission does not use names or ID arithmetic.
 
-`data/hero/6/canonical.v1.json` contains only the admitted Hero key and one CN-scoped semantic fact. It contains no Stage/Freeze/Status state and no Legacy generated output.
-
-## 4C — Presentation inputs
-
-Korean display localization is presentation-only:
+## Presentation localization
 
 ```text
 利昂 → 레온
 ```
 
-It is not used to establish identity.
+The Korean label is presentation-only and does not establish identity.
 
-The reused verified asset is explicitly `SP_ARTWORK`, not a normal portrait. The local asset-reference record preserves the prior contract/result identifiers and expected output digest, while production generation does not execute Legacy Asset Intake.
+## Current portrait
 
-## 4D — Deterministic generation
+Hero 6 now uses the verified clean base-skin portrait derivative:
 
-`tools/hero-6/generate.mjs` reads only:
+```text
+source PNG:
+Leon_Animation_FIN_idle_Normal_default.png
+1443 x 2112
+SHA256 8d04d4858d8bbb8021cef1439183018293ff28659f42e486ae1306d8c5f616d1
+
+current WebP:
+BASE_PORTRAIT
+1443 x 2112
+SHA256 7f679f80b4712353f727aeb6e087ce8ba8380bce8542bc992115b154889b23f3
+```
+
+The previous `asset.sp-artwork.v1.json` remains retained as valid alternate SP artwork evidence but is no longer the current Hero 6 portrait input.
+
+## Deterministic generation
+
+`tools/hero-6/generate.mjs` reads only admitted internal inputs:
 
 ```text
 canonical.v1.json
 localization.ko.v1.json
-asset.sp-artwork.v1.json
+asset.base-portrait.v1.json
 ```
 
-It does not read raw ConfigData, Legacy repositories, migration checkpoints, or semantic evidence at generation time.
+It does not read raw ConfigData or the predecessor repository at generation time.
 
-Run:
+The aggregate Hero consumer uses:
 
-```sh
-node tools/hero-6/generate.mjs --check
-node --test tests/hero-6-vertical-slice.test.mjs
-```
+- Hero 1: SP_ARTWORK
+- Hero 6: BASE_PORTRAIT
+- Hero 37: SP_ARTWORK
 
-## Non-scope / next decision
+This is deliberate. General portrait availability is expanded only where direct verified evidence exists.
 
-Not included yet:
+## Presentation ownership
 
-- frontend framework or hosting choice
-- normal Hero portrait admission
-- relation admission
-- all-Hero schema/population migration
-- raw-source ingestion framework
-- central owner/validator orchestration
-
-Before 4E, decide presentation ownership:
+Presentation ownership is already resolved as option B:
 
 ```text
-A. this repository owns the minimal presentation runtime
-or
-B. a separate consumer repository owns presentation
+LuceatLuxVestra42/Data
+= evidence / admission / canonical / generated producer
+
+LuceatLuxVestra42/langrisser-test-web
+= presentation consumer
 ```
+
+## Non-scope
+
+This change does not claim normal portrait coverage for Heroes 1 or 37 and does not alter semantic identity, game facts, or relations.
