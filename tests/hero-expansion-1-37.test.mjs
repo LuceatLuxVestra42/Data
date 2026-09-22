@@ -68,3 +68,16 @@ test('aggregate generated consumer excludes source provenance', () => {
   const text = serializeHeroIndex();
   assert.doesNotMatch(text, /HPCmd_INI|ConfigData|sourceCommit|logicalPath|checkpoint|Legacy/);
 });
+
+
+test('CARD_ARTWORK and legacy card paths are excluded from the new Hero producer', () => {
+  const generated = fs.readFileSync(path.join(root, 'data/generated/heroes/index.v1.json'), 'utf8');
+  const producer = fs.readFileSync(path.join(root, 'tools/heroes/generate-index.mjs'), 'utf8');
+  const combined = `${generated}\n${producer}`;
+
+  assert.doesNotMatch(combined, /CARD_ARTWORK|hero-card-artwork|heroes\/cards/i);
+  assert.deepEqual(
+    buildHeroIndex().heroes.map((hero) => hero.display.asset.kind),
+    ['SP_ARTWORK', 'BASE_PORTRAIT', 'SP_ARTWORK']
+  );
+});
