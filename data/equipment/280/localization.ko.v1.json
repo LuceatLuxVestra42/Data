@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "equipmentId": 280,
+  "sourceLabel": "古巨美的馈赠",
+  "locale": "ko-KR",
+  "displayLabel": "쥬그미의 선물",
+  "authorityBoundary": "PRESENTATION_ONLY",
+  "reference": {
+    "preservedArtifact": "전용장비_EquipmentID_중국어명_한국어명_영웅_실장상태_한국어효과_통합_2026-09-20.txt",
+    "lookupKey": "EquipmentID=280"
+  },
+  "relationAuthority": false,
+  "identityJoinUsed": false
+}
