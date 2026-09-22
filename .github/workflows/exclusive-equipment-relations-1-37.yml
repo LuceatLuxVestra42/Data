@@ -1,0 +1,38 @@
+name: Exclusive Equipment Relations 1 and 37
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - data/relations/hero-exclusive-equipment/**
+      - data/equipment/277/**
+      - data/equipment/280/**
+      - data/generated/relations/hero-exclusive-equipment-index.v1.json
+      - data/contracts/hero-exclusive-equipment-expansion-handoff.v1.json
+      - tools/heroes/generate-exclusive-equipment-index.mjs
+      - tests/exclusive-equipment-relations-1-37.test.mjs
+      - .github/workflows/exclusive-equipment-relations-1-37.yml
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check relation index
+        run: node tools/heroes/generate-exclusive-equipment-index.mjs --check
+      - name: Run relation expansion tests
+        run: node --test tests/exclusive-equipment-relations-1-37.test.mjs
+      - name: Verify clean validation
+        run: git diff --exit-code

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "status": "PRODUCER_HANDOFF_READY",
+  "producer": {
+    "repository": "LuceatLuxVestra42/Data",
+    "inputPath": "data/generated/relations/hero-exclusive-equipment-index.v1.json",
+    "contentSha256": "3b9c303eb1892b8380d0826af6a8f5f8da1cd6f64e16df432ba8aa1efae35779"
+  },
+  "population": {
+    "heroIds": [1, 6, 37],
+    "equipmentIds": [277, 416, 280],
+    "relationCount": 3
+  },
+  "consumerBoundary": {
+    "mode": "SEPARATE_PRESENTATION_REPOSITORY",
+    "forbiddenRuntimeDependencies": [
+      "raw ConfigData",
+      "Legacy repository checkout",
+      "Data repository checkout",
+      "semantic evidence",
+      "canonical relation source",
+      "name JOIN",
+      "ID arithmetic"
+    ]
+  },
+  "authorityBoundary": "PRESENTATION_HANDOFF_CONTRACT_NOT_RELATION_AUTHORITY"
+}

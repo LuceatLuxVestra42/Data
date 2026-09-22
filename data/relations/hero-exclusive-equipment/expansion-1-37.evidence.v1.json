@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "scope": "exclusive-equipment-relation-expansion-1-37",
+  "predecessor": {
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "observedMain": "57fb1b1262f475d24a3ddd8dc0d5883c2eabe4ff",
+    "sourceContract": {
+      "path": "data/contracts/hero-exclusive-equipment-relation-source-contract.v1.json",
+      "gitBlobSha": "919a8dd678e72646dba53c1b26fcf2acc0cb3ab8"
+    },
+    "relationSet": {
+      "path": "data/generated/hero-exclusive-equipment-relations.v1.json",
+      "gitBlobSha": "33caa16212a5a71195015e05c815024fb62e6be6"
+    },
+    "finalValidation": {
+      "path": "data/validation/hero-exclusive-equipment-relation-stageB-final.v1.json",
+      "gitBlobSha": "ff3b0a8b1c7a9b364f4c638f0a1110aa3d7626ee"
+    }
+  },
+  "records": [
+    {
+      "heroId": 1,
+      "equipmentId": 277,
+      "relationType": "exclusive",
+      "verificationStatus": "VERIFIED",
+      "directSourceProvenance": {
+        "sourceKind": "EQUIPMENT_SKILL_HERO",
+        "table": "ConfigDataEquipmentInfo",
+        "recordId": 277,
+        "field": "SkillHero",
+        "value": 1,
+        "nativeDirection": "equipmentId -> heroId"
+      }
+    },
+    {
+      "heroId": 37,
+      "equipmentId": 280,
+      "relationType": "exclusive",
+      "verificationStatus": "VERIFIED",
+      "directSourceProvenance": {
+        "sourceKind": "EQUIPMENT_SKILL_HERO",
+        "table": "ConfigDataEquipmentInfo",
+        "recordId": 280,
+        "field": "SkillHero",
+        "value": 37,
+        "nativeDirection": "equipmentId -> heroId"
+      }
+    }
+  ],
+  "boundaries": {
+    "nameJoinUsed": false,
+    "descriptionParsingUsed": false,
+    "idArithmeticUsed": false,
+    "generalEquipmentIncluded": false
+  }
+}
