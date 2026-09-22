@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "heroId": 6,
+  "sourceLabel": "利昂",
+  "locale": "ko-KR",
+  "displayLabel": "레온",
+  "authorityBoundary": "PRESENTATION_ONLY",
+  "reference": {
+    "preservedArtifact": "영웅명_검수_완료_역할경계보강_2026-09-12.txt",
+    "lookup": "利昂 - 레온"
+  },
+  "identityJoinUsed": false
+}
