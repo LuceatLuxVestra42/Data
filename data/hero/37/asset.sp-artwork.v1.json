@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "heroId": 37,
+  "assetKey": "hero-37-sp-artwork",
+  "kind": "SP_ARTWORK",
+  "charImageId": 1024,
+  "sourceSpinePath": "Spine/Char/Zigodlla_ABS/Zigodlla_SP_Prefab.prefab",
+  "expected": {
+    "width": 1151,
+    "height": 1600,
+    "sha256": "c91022024571d103dee3c49be81fea9251e41662cb73fbf7e511f149be0af2f2"
+  },
+  "proof": {
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "ref": "8b0d6a55dd858cfb171174119ac480c0934ac5dc",
+    "contractPath": "tools/asset-intake/experiments/hero-sp-bootstrap-migration/hero-sp-25-contract.v1.json",
+    "contractGitBlobSha": "b6fa12f3da3d2db01ddf3f6597e125909cca7133",
+    "resultPath": "tools/asset-intake/experiments/hero-sp-bootstrap-migration/result.sp25-migration-independence.v1.json",
+    "resultGitBlobSha": "e54fe089e427d1ec3ab89e2a6d7ee9790bb87f54",
+    "resultStatus": "PASS_SP_ASSET_INTAKE_MIGRATION_INDEPENDENCE"
+  },
+  "authorityBoundary": "PRESENTATION_ASSET_REFERENCE_ONLY",
+  "normalPortraitClaim": false,
+  "notes": [
+    "SP artwork charImageId 1024 is an asset-contract identifier. It is not derived from ConfigDataHeroInfo.CharImage_ID=37."
+  ]
+}
