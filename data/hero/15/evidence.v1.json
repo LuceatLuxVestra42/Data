@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "scope": "hero-15-base-portrait-expansion",
+  "sourceEvidence": {
+    "sourceFamily": "CN_ConfigDataHeroInfo",
+    "repository": "LuceatLuxVestra42/langrisser-future-guide",
+    "commit": "6475e63ee23d18adf733756c26a14fa9e3ed662c",
+    "logicalPath": "data/configdata/ConfigDataHeroInfo.json",
+    "gitBlobSha": "728daab3370f0c7779449663ea02e638677944d4",
+    "locator": {"field": "ID", "value": 15},
+    "observed": {
+      "ID": 15,
+      "Name": "莉亚娜",
+      "Name_Eng": "Riana",
+      "Useable": true,
+      "HPCmd_INI": 1500,
+      "CharImage_ID": 15,
+      "HeroInformation_ID": 15
+    }
+  },
+  "interpretationEvidence": [{
+    "preservedArtifact": "랑그릿사_ConfigData_확정_해석_정리_2026-09-07_소스팩반영.txt",
+    "supportedClaims": [
+      "ConfigDataHeroInfo is the Hero/unit master table and its ID field is the Hero/Unit ID within this source family.",
+      "HeroInfo.HPCmd_INI / 100 is the Hero-owned troop HP modifier percentage and is not Hero-Soldier membership."
+    ]
+  }],
+  "syntheticInputUsed": false
+}
